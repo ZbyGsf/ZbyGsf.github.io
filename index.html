@@ -3,10 +3,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>简历网站测试</title>
+  <meta name="description" content="张博宇的个人简历。">
+  <title>张博宇 | 个人简历</title>
+  <style>
+    :root { color-scheme: light; }
+    * { box-sizing: border-box; }
+    html { background: #edf2f5; }
+    body { margin: 0; color: #123249; font-family: system-ui, -apple-system,
+           BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif; }
+    .toolbar { max-width: 900px; margin: 0 auto; padding: 14px 16px;
+               display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    h1 { margin: 0; font-size: 17px; line-height: 1.5; font-weight: 600; }
+    .pdf-link { display: inline-block; flex: 0 0 auto; padding: 8px 14px;
+                border: 1px solid #123249; border-radius: 6px; color: #123249;
+                background: #fff; font-size: 14px; line-height: 1.5;
+                text-decoration: none; }
+    .pdf-link:focus-visible { outline: 3px solid #149d9c; outline-offset: 3px; }
+    main { max-width: 900px; margin: 0 auto; background: #fff; }
+    figure { margin: 0; }
+    figure + figure { border-top: 10px solid #edf2f5; }
+    img { display: block; width: 100%; height: auto; }
+    @media (min-width: 940px) { main { box-shadow: 0 6px 28px #12324912; margin-bottom: 28px; } }
+    @media print {
+      html, body { background: #fff; }
+      .toolbar { display: none; }
+      main { max-width: none; box-shadow: none; margin: 0; }
+      figure + figure { border: 0; }
+      figure { break-after: page; }
+      figure:last-child { break-after: auto; }
+    }
+  </style>
 </head>
 <body>
-  <h1>测试成功</h1>
-  <p>如果微信中可以看到这段文字，说明当前网络能够打开这个网站。</p>
+  <header class="toolbar">
+    <h1>张博宇 · 个人简历</h1>
+    <a class="pdf-link" href="resume.pdf?v=573d543fb701">PDF 原件</a>
+  </header>
+  <main aria-label="张博宇的两页简历">
+    <figure>
+      <img src="page-1.jpg?v=573d543fb701" width="1350" height="1950"
+           alt="简历第1页：个人信息、教育经历、工作经历与科研成果"
+           fetchpriority="high" decoding="async">
+    </figure>
+    <figure>
+      <img src="page-2.jpg?v=573d543fb701" width="1350" height="1950"
+           alt="简历第2页：项目经历、奖项与总结" loading="lazy" decoding="async">
+    </figure>
+  </main>
 </body>
 </html>
